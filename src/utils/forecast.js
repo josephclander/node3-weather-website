@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
         callback('Unable to find location.', undefined);
       } else {
         const data = body.current;
-        const text = `${data.weather_descriptions[0]}. It is currently ${data.temperature} out. It feels like ${data.feelslike} degrees.`;
+        const text = `${data.weather_descriptions[0]}. It is currently ${data.temperature} deg C out. It feels like ${data.feelslike} deg C. Current UV index is ${data.uv_index}.`;
         callback(undefined, text);
       }
     }
